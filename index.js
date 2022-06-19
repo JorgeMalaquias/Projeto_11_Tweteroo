@@ -19,7 +19,7 @@ server.get('/sign-up', (req, res) => {
 server.post('/sign-up', (req, res) => {
     console.log(req.body);
     user.push(req.body);
-    res.send(user);
+    res.send("OK");
 })
 
 
