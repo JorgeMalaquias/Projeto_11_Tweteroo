@@ -15,11 +15,7 @@ const tweets = [{
 
 
 function findingAvatar(userName) {
-    console.log("tamu na lida");
-    console.log(user);
     const userToFindAvatar = user.find((u) => u.username === userName);
-    console.log("eis o que achei");
-    console.log(user.find((u) => u.username === userName));
     return userToFindAvatar.avatar;
 }
 function tweet(t) {
@@ -41,10 +37,8 @@ server.post('/tweets', (req, res) => {
 
 server.get('/tweets', (req, res) => {
     if (tweets.length > 10) {
-        console.log(tweets.length);
         res.send((tweets.slice(tweets.length - 10, tweets.length)).map(tweet));
     } else {
-        console.log(tweets.length);
         res.send(tweets.map(tweet));
     }
 })
